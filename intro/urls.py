@@ -18,9 +18,12 @@ from django.contrib import admin
 from django.urls import path
 from demo.views import hello_view
 from demo.views import sum_view
+from demo.views import pagi_view
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', hello_view),
     path('sum/<int:op1>/<int:op2>/', sum_view),
+    path('pagi/', pagi_view),
 ]

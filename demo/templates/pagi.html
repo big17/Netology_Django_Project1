@@ -1,0 +1,18 @@
+<head>
+    <title>Pagi</title>
+</head>
+<body>
+
+    {% for e in page %}
+    <p>{{ e }}</p>
+    {% endfor %}
+
+    {% if page.has_previous %}
+    <a href="?page={{ page.previous_page_number }}">Назад</a>
+    {% endif %}
+
+    {% if page.has_next %}
+    <a href="?page={{ page.next_page_number }}">Вперед</a>
+    {% endif %}
+
+</body>
