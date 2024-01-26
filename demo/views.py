@@ -5,9 +5,12 @@ from django.http import HttpResponse
 
 
 def hello_view(request):
-    print("here1")
-    print("here2")
-    return HttpResponse("Hello, World");
+    context ={
+        'test': 5,
+        'data': [1, 5, 8],
+        'val': 'hello',
+    }
+    return render(request, 'demo.html', context)
 
 
 def sum_view(request, op1, op2):
